@@ -1,0 +1,20 @@
+---
+title: "Final"
+author: "Melinda Jenner"
+date: "Sunday, September 28, 2014"
+output: html_document
+---
+
+```{r, echo = FALSE}
+setwd("C:/Users/MJ/Downloads/data")
+gapminder <- read.delim("gapminderDataFiveYear.txt")
+gapminder.UG <- subset(gapminder, country == "Uganda")
+gapminder.UK <- subset(gapminder, country == "United Kingdom")
+gapminder.US <- subset(gapminder, country == "United States")
+plot(gdpPercap~year, data = gapminder.UG, main = "Uganda")
+plot(gdpPercap~year, data = gapminder.UK, main = "United Kingdom")
+plot(gdpPercap~year, data = gapminder.US, main = "United States")
+```
+
+Not only is the GDP per capita much lower across time in Uganda as compared to the United States or the United Kingdom, but Uganda's GDP per capita experiences a decrease in the 1970s until the 1990s, as compared to steady growth in the other two countries. 
+
